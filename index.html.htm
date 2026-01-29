@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text Refiner</title>
+  <link rel="stylesheet" href="index.css.css" />
+  <link rel="icon" href="assets\Screenshot 2026-01-27 201705.png" alt="logo">
+</head>
+<body>
+
+<main class="app-container">
+
+  <!-- Chat Output Area -->
+  <section class="chat-area" id="chatArea" aria-live="polite"></section>
+
+  <!-- Loading Indicator -->
+  <div class="loading-state" id="loadingState" hidden>
+    <span class="spinner"></span>
+    <p>Refining your message…</p>
+  </div>
+
+  <!-- Input + Controls -->
+  <section class="input-wrapper">
+
+    <!-- Capsule Input -->
+    <div class="input-capsule">
+      <div class="word-counter">
+        <span class="label">Words</span>
+        <span id="wordCount">0</span>
+      </div>
+
+      <textarea
+        id="userInput"
+        placeholder="Type your message here…"
+        rows="1"
+        aria-label="Text input"
+      ></textarea>
+
+      <button
+        id="submitBtn"
+        class="submit-btn"
+        disabled
+        aria-label="Submit text"
+      >
+        ↑
+      </button>
+    </div>
+
+    <!-- Tone Selector -->
+    <div class="tone-selector">
+      <p class="tone-title">Set your tone</p>
+
+      <div class="tone-options">
+        <button class="tone-btn" data-tone="casual">Casual</button>
+        <button class="tone-btn" data-tone="formal">Formal</button>
+        <button class="tone-btn" data-tone="dark">Dark Psychological</button>
+        <button class="tone-btn" data-tone="friendly">Friendly</button>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="index.js.js"></script>
+</body>
+</html>
